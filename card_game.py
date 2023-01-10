@@ -1,32 +1,3 @@
-"""
-
-Challenge - Deck of Cards
-
-Create 2 Classes:
-
-Class Card
-
-    Attributes:
-
-        name
-        value
-
-Class Deck
-
-    Attributes:
-
-        pack: this should be initialised to a list of full deck of cards objects
-        discarded: This should be initialised to an empty list
-
-    Methods
-
-        Shuffle
-        Pick a card (should return a card instance from the top of the deck)
-
-Create a simple higher or lower game using your deck of cards
-
-"""
-
 import random
 from typing import List
 
