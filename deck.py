@@ -14,16 +14,17 @@ class Deck:
         # Creating randomess in the card order at first
         random.shuffle(self.__original_pack)
 
-        # Performing overhand shuffle 4 times
-        for i in [(20, 45), (15, 40), (10,30), (30, 45)]:
+        # Performing overhand shuffle 5 times
+        for each_iter in range(0, 5):
+            i = [random.randint(15, 40), random.randint(35, 45)]
             self.shuffing_deck = self.__original_pack
 
-            self.middle_part_of_deck = self.shuffing_deck[:i[0]]
+            self.bottom_part_of_deck = self.shuffing_deck[:i[0]]
             self.middle_part_of_deck = self.shuffing_deck[i[0]:i[1]]
             self.top_part_of_deck = self.shuffing_deck[i[1]:]
 
             # When overhand shuffling middle part goes top!
-            self.overhand_shuffled_deck = self.middle_part_of_deck + self.top_part_of_deck + self.middle_part_of_deck
+            self.overhand_shuffled_deck = self.middle_part_of_deck + self.top_part_of_deck + self.bottom_part_of_deck
 
             # Setting the pack
             self.set_pack(self.overhand_shuffled_deck)
